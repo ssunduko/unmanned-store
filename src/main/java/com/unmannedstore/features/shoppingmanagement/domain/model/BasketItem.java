@@ -1,6 +1,9 @@
 package com.unmannedstore.features.shoppingmanagement.domain.model;
 
-import javax.persistence.*;
+
+
+import jakarta.persistence.*;
+
 
 /**
  * Domain model for an item in a shopping basket.

@@ -1,11 +1,19 @@
 package com.unmannedstore.features.shoppingmanagement.api.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 /**
  * DTO for returning the result of a basket update (add/remove item).
  */
+@Schema(description = "Response containing the result of a basket update operation")
 public class BasketUpdateResponse {
+    @Schema(description = "Whether the basket update operation was successful")
     private boolean success;
+    
+    @Schema(description = "Message describing the result of the operation")
     private String message;
+    
+    @Schema(description = "Updated contents of the basket after the operation")
     private BasketContentsResponse updatedBasket;
 
     public BasketUpdateResponse() {}

@@ -1,14 +1,21 @@
 package com.unmannedstore.features.shoppingmanagement.api.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.math.BigDecimal;
 import java.util.List;
 
 /**
  * DTO for returning the contents of a shopping basket.
  */
+@Schema(description = "Response containing the contents of a shopping basket")
 public class BasketContentsResponse {
+    @Schema(description = "List of products in the basket with their details")
     private List<ProductDto> items;
+    
+    @Schema(description = "Total number of items in the basket")
     private int totalItems;
+    
+    @Schema(description = "Total monetary amount for all items in the basket")
     private BigDecimal totalAmount;
 
     public BasketContentsResponse() {}
